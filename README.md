@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# 🎬 WatchMe - Catálogo de Filmes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação moderna de catálogo de filmes construída com React, TypeScript e Tailwind CSS, integrada com a API do The Movie Database (TMDB).
 
-Currently, two official plugins are available:
+![WatchMe Preview](https://via.placeholder.com/800x400/1a1a1a/ffffff?text=WatchMe+Preview)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## React Compiler
+### 🎯 Principais
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Catálogo Completo**: Navegue por diferentes categorias de filmes
+- **Detalhes Avançados**: Modal com informações completas, elenco e trailers
+- **Interface Responsiva**: Design adaptável para desktop e mobile
+- **Tema Dark**: Interface moderna com tema escuro
+- **Sidebar Inteligente**: Navegação colapsável com tooltips
 
-## Expanding the ESLint configuration
+### 📱 Categorias Disponíveis
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Populares**: Filmes mais populares do momento
+- **Mais Votados**: Filmes com melhor avaliação
+- **Em Breve**: Próximos lançamentos
+- **Nos Cinemas**: Filmes em cartaz
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🎭 Modal de Detalhes
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Informações Completas**: Sinopse, duração, gêneros, avaliação
+- **Elenco**: Fotos e nomes dos atores principais
+- **Trailers**: Acesso direto aos trailers no YouTube
+- **Design Imersivo**: Backdrop do filme como fundo
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Tecnologias Utilizadas
+
+### Frontend
+
+- **React 18** - Biblioteca principal
+- **TypeScript** - Tipagem estática
+- **Vite** - Build tool e dev server
+- **Tailwind CSS** - Framework de CSS utilitário
+
+### UI/UX
+
+- **Radix UI** - Componentes acessíveis
+- **Lucide React** - Ícones modernos
+- **Class Variance Authority** - Variantes de componentes
+- **Tailwind Merge** - Merge inteligente de classes CSS
+
+### API
+
+- **TMDB API** - The Movie Database
+- **Fetch API** - Requisições HTTP nativas
+
+## 📦 Instalação
+
+### Pré-requisitos
+
+- Node.js 18+
+- npm ou yarn
+
+### Passos
+
+1. **Clone o repositório**
+
+```bash
+git clone https://github.com/seu-usuario/watch-me.git
+cd watch-me
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Instale as dependências**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3. **Configure a API do TMDB**
+
+   - Acesse [TMDB](https://www.themoviedb.org/settings/api)
+   - Obtenha sua chave da API
+   - A chave já está configurada no projeto para demonstração
+
+4. **Execute o projeto**
+
+```bash
+npm run dev
+```
+
+5. **Acesse a aplicação**
+   - Abra [http://localhost:5173](http://localhost:5173) no navegador
+
+## 🏗️ Estrutura do Projeto
